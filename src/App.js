@@ -6,6 +6,7 @@ import Error from './components/Error'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import LoadingComponent from './components/LoadingComponent'
+import User from './components/User';
 
 function App() {
   const [isError, setIsError] = useState(false);
@@ -14,12 +15,12 @@ function App() {
     <div>
       <Header />
       <Switch>
-          <Route path="/error" component={Error} />
+          <Route path="/user/:id" component={User} />
           <Route path="/">
           { isLoading? 
               <LoadingComponent /> :
               isError?
-                <Redirect to="/error" /> :
+                <Error /> :
                 <Main />}
           </Route>
       </Switch>

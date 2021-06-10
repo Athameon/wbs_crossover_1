@@ -1,9 +1,14 @@
-import React from'react';
+import React, { useState} from'react';
 import './Main.css'
+import User from './User.js'
+import FeedMock from "../Feed.json";
+import Feed from './Feed';
 
 const Main = () => {
-  return(
-    <h1>Main</h1>
+  return (
+		<>
+      <Feed />
+	  </>
   )
 }
 
