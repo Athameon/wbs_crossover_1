@@ -1,0 +1,12 @@
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.message-hashtags {
+  border: 1px solid red;
+  width: fit-content;
+}
