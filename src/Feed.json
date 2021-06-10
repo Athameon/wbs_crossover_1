@@ -1,0 +1,36 @@
+{
+  "messages": [
+    {
+      "id": "85ab47c9-2a6b-4895-849a-44484704963f",
+      "content": "This is a nice Twitter clone",
+      "date": "2020-6-05T14:48:00.000Z",
+      "author": {
+        "id": "87c1bd97-a3e7-497a-9bda-71950c429b20",
+        "first_name": "Mia",
+        "last_name": "Doa",
+        "user_name": "@Mia18",
+        "img": null,
+        "password": "passwort",
+        "email": "Mia18@gmail.com"
+      },
+      "hashtags": "twitter,cool,mia",
+      "parent": null
+    },
+    {
+      "id": "80a95eec-a07e-43d1-bb05-1e5b9261ba00",
+      "content": "Mia, you are totally right.",
+      "date": "2020-6-06T16:18:00.000Z",
+      "author": {
+        "id": "4ba2a59b-3179-4e4d-a64e-fb2280965342",
+        "first_name": "Paul",
+        "last_name": "Fritze",
+        "user_name": "@ItsPaul",
+        "img": null,
+        "password": "passwort54",
+        "email": "ItsPaul@gmail.com"
+      },
+      "hashtags": "mia,paul,realTwitter",
+      "parent": "85ab47c9-2a6b-4895-849a-44484704963f"
+    }
+  ]
+}
