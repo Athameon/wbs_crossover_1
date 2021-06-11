@@ -135,7 +135,7 @@ const Main = (props) => {
       className='Modal'
       >
         <form onSubmit={submitPost} className='modal-form'>
-          <input className='input-bottom' type="text"></input>
+          <input id='input' type="text"></input>
           {/* <textarea cols="20" rows="3"></textarea> */}
           <button className='close-modal-btn' onClick={closeModal}>x</button>
         </form>

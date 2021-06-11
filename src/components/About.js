@@ -3,8 +3,8 @@ import './About.css'
 
 const About = () => {
 	return (
-		<div>
-			<h1>About Page</h1>
+		<div className='about'>
+			<img src="https://img.devrant.com/devrant/rant/r_1128666_fqHfa.jpg" alt="" />
 		</div>
 	)
 }
