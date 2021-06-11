@@ -1,0 +1,11 @@
+.about {
+  width: 100%;
+  display: flex;
+}
+.about img {
+  width: 700px;
+  height: 600px;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 12px;
+}
