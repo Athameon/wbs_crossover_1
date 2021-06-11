@@ -1,33 +1,47 @@
-.Modal{
-	position: absolute;
-	bottom: 16%;
-	right: 14%;
+.Modal {
+  position: absolute;
+  bottom: 16%;
+  right: 14%;
 }
-.open-modal-btn{
-	font-size: 44px;
-	font-weight: 400;
-	border: none;
-	background: transparent;
-	position: absolute;
-	bottom: 12%;
-	right: 10%;
+.open-modal-btn {
+  font-size: 44px;
+  font-weight: 400;
+  border: none;
+  background: transparent;
+  position: absolute;
+  bottom: 12%;
+  right: 10%;
 }
-.modal-form{
-	position: relative;
+.open-modal-btn:hover {
+  cursor: pointer;
 }
-.close-modal-btn{
-	color: red;
-	font-weight: 700;
-	font-size: 24px;
-	border: none;
-	background: transparent;
-	position: absolute;
-	right: 6px;
+.modal-form {
+  position: relative;
 }
-textarea{
-	border-radius: 12px;
-	border: 1px solid #3F403F;
-	box-shadow: 1px 1px 2px 1px #d7d8d7;
-	outline: none;
-	padding:12px 36px 12px 12px;
+.close-modal-btn {
+  color: red;
+  font-weight: 700;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 6px;
+}
+/* textarea {
+  border-radius: 12px;
+  border: 1px solid #3f403f;
+  box-shadow: 1px 1px 2px 1px #d7d8d7;
+  outline: none;
+  padding: 12px 36px 12px 12px;
+} */
+.input-bottom {
+  max-width: 300px;
+  height: 100px;
+  background: transparent;
+  border-radius: 12px;
+  border: 1px solid #3f403f;
+  box-shadow: 1px 1px 2px 1px #d7d8d7;
+  text-align: left;
+  outline: none;
+  word-break: break-all;
 }
