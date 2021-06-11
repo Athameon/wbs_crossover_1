@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import User from './components/User';
+import Status from './components/Status';
 
 function App() {
   const [searchValue, setSearchValue] = useState(null);
@@ -18,6 +19,7 @@ function App() {
       <Header performSearch={performSearch} />
       <Switch>
           <Route path="/user/:id" component={User} />
+          <Route path="/message/:id" component={Status} />
           <Route path="/">
             <Main searchValue={searchValue} />
           </Route>

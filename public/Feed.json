@@ -14,7 +14,8 @@
         "email": "Mia18@gmail.com"
       },
       "hashtags": "twitter,cool,mia",
-      "parent": null
+      "parent": null,
+      "children": "80a95eec-a07e-43d1-bb05-1e5b9261ba00,80a95eec-a07e-43d1-bb05-1e5b9261ba00,80a95eec-a07e-43d1-bb05-1e5b9261ba00"
     },
     {
       "id": "80a95eec-a07e-43d1-bb05-1e5b9261ba00",
