@@ -1,5 +1,32 @@
 .Modal{
 	position: absolute;
-	bottom: 20%;
-	left: 30%;
+	bottom: 16%;
+	right: 20%;
+}
+.open-modal-btn{
+	font-size: 44px;
+	font-weight: 400;
+	border: none;
+	background: transparent;
+	position: absolute;
+	bottom: 12%;
+	right: 10%;
+}
+.modal-form{
+	position: relative;
+}
+.close-modal-btn{
+	color: red;
+	font-size: 24px;
+	border: none;
+	background: transparent;
+	position: absolute;
+	right: 10px;
+}
+textarea{
+	border-radius: 12px;
+	border: 1px solid #3F403F;
+	box-shadow: 1px 1px 1px 2px #E6E8E6;
+	outline: none;
+	padding:12px;
 }
