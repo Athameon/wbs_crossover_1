@@ -3,11 +3,13 @@ import "./Main.css";
 import LoadingComponent from './LoadingComponent';
 import Error from './Error.js'
 import Feed from "./Feed";
+import Modal from 'react-modal';
 
 const Main = (props) => {
   const [searchResult, setSearchResult] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false)
+  const [openModal, setOpenModal] =useState(false)
 
   useEffect(() => {
     let url = "/Feed.json";  // Replace by real API address
@@ -54,6 +56,13 @@ const Main = (props) => {
 
   }, [props.searchValue]);
 
+  const showModal =() => {
+    setOpenModal(true)
+  }
+  const closeModal =() => {
+    setOpenModal(false)
+  }
+
   if (isLoading) {
     return <LoadingComponent />;
   } else if(isError) {
@@ -62,6 +71,20 @@ const Main = (props) => {
     return (
 		<>
       <Feed data={searchResult} />
+      <div className='modal-pop'>
+        <button onClick={showModal}>ADD</button>
+      </div>
+      <Modal 
+      isOpen={openModal}
+      onRequestClose={closeModal}
+      ariaHideApp={false}
+      className='Modal'
+      >
+        <button onClick={closeModal}>x</button>
+        <form>
+          <textarea cols="20" rows="5"></textarea>
+        </form>
+      </Modal>
 	  </>
     )
   }
