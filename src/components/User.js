@@ -54,11 +54,11 @@ const User = () => {
     return (
 		<>
       <div>
-        <div>
+        <div className='user-profile'>
           <img src={user.img} alt='User'></img>
-                  <h2>{user.first_name} {user.last_name}</h2>
-                  <h3>{user.user_name}</h3>
-          <h3>{user.email}</h3>
+                  <h2 className='user-profile-name'>{user.first_name} {user.last_name}</h2>
+                  <h3 className='user-profile-username'>{user.user_name}</h3>
+          <h3 className='user-profile-email'>{user.email}</h3>
         </div>
       </div>
       <Feed userMessages={true} data={data}/>

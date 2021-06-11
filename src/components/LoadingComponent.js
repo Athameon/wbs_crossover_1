@@ -13,7 +13,7 @@ transform: translate (50%, -50%);
 const LoadingComponent = () => {
   return(
     <div className='loading'>
-      <HashLoader css={hash} size={100} color={'#C8553D'} speedMultiplier={1} />
+      <HashLoader css={hash} size={100} color={'#475841'} speedMultiplier={1} />
     </div>
 
   )
