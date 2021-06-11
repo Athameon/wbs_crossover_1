@@ -13,10 +13,12 @@ const UserMessage = (item) => {
   }
 
 	return (
-		<div className='message'>
-			<p>{item.content}</p>
-			<p className="message-hashtags">{getHashtags(item)}</p>
-			<p>{item.date}</p>
+		<div className='user-message'>
+			<p className='user-message-content'>{item.content}</p>
+			<div className='user-message-content-wrapper'>
+				<p className="user-message-hashtags">{getHashtags(item)}</p>
+				<p className='user-message-date'>{item.date}</p>
+			</div>
 		</div>
 	)
 }

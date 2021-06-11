@@ -1,6 +1,26 @@
-.user {
+.user-profile{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  flex-direction: column;
+  padding: 40px 0;
+}
+.user-profile img{
+  width: 100px;
+  border-radius: 12px;
+  padding: 10px 0;
+}
+.user-profile-name{
+  font-size: 34px;
+  color: #0c0e14;
+  padding: 10px 0;
+}
+.user-profile-username{
+  color: #2D3142;
+}
+.user-profile-email{
+  padding: 10px 0;
+  color: #868686;
+  font-size: 14px;
+  font-weight: 300;
 }
