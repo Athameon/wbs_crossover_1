@@ -1,9 +1,21 @@
-import React from'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css'
 
-const Header = () => {
+const Header = (props) => {
+  
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.performSearch(event.target.firstChild.value);
+  }
+
   return(
-    <h1>Header</h1>
+    <div className='header'>
+      <form onSubmit={handleSubmit}>
+        <input type='text' />
+        <input type='submit' />
+      </form>
+    </div>
   )
 }
 
