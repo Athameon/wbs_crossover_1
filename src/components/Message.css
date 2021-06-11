@@ -4,14 +4,13 @@
   justify-content: center;
   width: 80%;
   margin: 10px auto;
-
 }
 .user-img {
   width: 60px;
   border-radius: 18px;
   margin-right: 10px;
 }
-.users{
+.users {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -19,30 +18,36 @@
   width: 100%;
   margin-right: 10px;
 }
-.user-name{
+.user-name {
   font-size: 16px;
   font-weight: 700;
   padding-bottom: 6px;
-  color: #2D3142;
+  color: #2d3142;
+  text-decoration: none;
 }
-.message-content{
+
+.user-link {
+  text-decoration: none;
+}
+.message-content {
   font-size: 14px;
-  color: #3F403F;
+  color: #3f403f;
+  margin-top: 8px;
 }
-.hash{
+.hash {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   width: 100%;
   text-align: right;
 }
-.date{
+.date {
   font-size: 12px;
-  color: #CED0CE;
+  color: #ced0ce;
   padding-bottom: 10px;
 }
-.message-hashtags{
-font-weight: 700;
-font-size: 14px;
-color: #475841;
+.message-hashtags {
+  font-weight: 700;
+  font-size: 14px;
+  color: #475841;
 }

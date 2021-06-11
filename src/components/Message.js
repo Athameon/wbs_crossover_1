@@ -1,4 +1,5 @@
 import './Message.css'
+import { Link } from 'react-router-dom';
 
 const Message = (item) => {
 	function getHashtags(feedData) {
@@ -11,12 +12,18 @@ const Message = (item) => {
     return result.substr(0, result.length-1);
   }
 
+	console.log("Author Image: ", item.author);
+
 	return (
 		<div className='message'>
-		{/* {item.author.img} */}
-			<img className='user-img' src='https://randomuser.me/api/portraits/women/48.jpg' alt="User" />
+			<Link to={'user/' + item.author.id} >
+				<img className='user-img' src={item.author.img} alt="User" />
+			</Link>
 			<div className='users'>
-				<span className='user-name'>{item.author.user_name}</span>
+				<Link className='user-link' to={'user/' + item.author.id} >
+					<span className='user-name'>{item.author.user_name}</span>
+				</Link>
+				{/* <span className='user-name'>{item.author.user_name}</span> */}
 				<span className='message-content'>{item.content}</span>
 			</div>
 			<div className='hash'>
