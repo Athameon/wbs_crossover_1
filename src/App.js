@@ -1,27 +1,25 @@
 import './App.css';
-import React, { useState, useEffect, useRef } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header'
-import Error from './components/Error'
 import Main from './components/Main'
 import Footer from './components/Footer'
-import LoadingComponent from './components/LoadingComponent'
 import User from './components/User';
 
 function App() {
-  const [isError, setIsError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false)
+  const [searchValue, setSearchValue] = useState(null);
+
+  const performSearch = (searchValue) => {
+    setSearchValue(searchValue);
+  }
+
   return (
     <div>
-      <Header />
+      <Header performSearch={performSearch} />
       <Switch>
           <Route path="/user/:id" component={User} />
           <Route path="/">
-          { isLoading? 
-              <LoadingComponent /> :
-              isError?
-                <Error /> :
-                <Main />}
+            <Main searchValue={searchValue} />
           </Route>
       </Switch>
       <Footer />
