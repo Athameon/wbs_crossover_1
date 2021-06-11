@@ -3,7 +3,9 @@ import './Error.css'
 
 const Error = () => {
   return(
-    <h1>Error</h1>
+    <div className='error'>
+      <img src='https://johnastewart.org/wp-content/uploads/2019/07/404.png' />
+    </div>
   )
 }
 

@@ -1,9 +1,6 @@
 import './Message.css'
 
 const Message = (item) => {
-
-	console.log('item', item);
-
 	function getHashtags(feedData) {
     const hashtags = feedData.hashtags.split(",");
     let result = '';
@@ -16,7 +13,7 @@ const Message = (item) => {
 
 	return (
 		<div className='message'>
-			<img src={item.author.img} alt="User Image" />
+			<img src={item.author.img} alt="User" />
 			<p>{item.author.user_name}</p>
 			<p>{item.date}</p>
 			<p>{item.content}</p>
