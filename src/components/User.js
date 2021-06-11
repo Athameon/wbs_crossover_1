@@ -2,67 +2,69 @@ import { useEffect, useState} from 'react';
 import LoadingComponent from './LoadingComponent';
 import Error from './Error.js'
 import './User.css'
-import UserMock from '../UserMock.json';
 import { useParams } from 'react-router-dom';
 import Feed from './Feed.js';
 
 const User = () => {
-  const [user, setUser] = useState(null)
-  const [isLoading, setIsLoading] = useState(false);    //TODO: true
+  const [user, setUser] = useState(null);
+  const [data, setData] = useState(null)
+  
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false)
 
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
-    setUser(UserMock);
+    setIsError(false);
+    setIsLoading(true);
+    (async () => {
+      try {
+        const userResult = await fetch('/UserMock.json'); // TODO: Replace by API from backend with 'id'
+        if (!userResult.ok) {
+          throw Error("Failed to fetch the user data.");
+        }
+        const user = await userResult.json();
 
-  }, [])
+        const messagesResult = await fetch('/Feed.json'); // TODO: Filter and replace by API from backend
+        if(!messagesResult.ok) {
+          throw Error("Failed to fetch the messages data.");
+        }
+        const messages = await messagesResult.json();
 
-  // useEffect(() => {
-  //   setIsError(false);
-  //   setIsLoading(true);
+        console.log('Fetched following data from the user API: ', user);
+        setUser(user);
+        console.log('Fetched following user messages from the API: ', messages);
+        setData(messages);
 
-  //   fetch('id')
-  //   .then(result => {
-  //     if (result.ok) {
-  //       return result.json();
-  //     }
-  //     throw Error('Error occured during fetching data.');
-  //   }, (networkError) => {
-  //     throw Error(networkError);
-  //   })
-  //   .then(jsonResult => {
-  //     setUser(jsonResult);
+        setIsError(false);
+        setIsLoading(false);
+      } catch(error) {
+        console.error(error);
 
-  //     setIsLoading(false);
-  //   })
-  //   .catch(error => {
-  //     console.error(error);
+        setIsError(true);
+        setIsLoading(false);
+      }
+    })()}, []);
 
-  //     setIsLoading(false);
-  //     setIsError(true);
-  //   })
-  // }, [])
-
-  if (user) { // TODO: Remove after real fetch is implemented
+  if (isLoading) {
+    return <LoadingComponent />;
+  } else if(isError) {
+    return <Error />
+  } else {
     return (
 		<>
       <div>
-        {isLoading? <LoadingComponent /> :
-          isError? <Error /> :
-            <div>
-              <img src={user.img} alt='User Image'></img>
-                      <h2>{user.first_name} {user.last_name}</h2>
-                      <h3>{user.user_name}</h3>
-              <h3>{user.email}</h3>
-            </div>}
+        <div>
+          <img src={user.img} alt='User'></img>
+                  <h2>{user.first_name} {user.last_name}</h2>
+                  <h3>{user.user_name}</h3>
+          <h3>{user.email}</h3>
+        </div>
       </div>
-      <Feed id={id}/>
+      <Feed userMessages={true} data={data}/>
 	  </>
     )
   }
-    return <p></p>
 }
 
-export default User
+export default User;
