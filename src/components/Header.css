@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 30px 0;
+	padding: 40px 0;
 }
 form{
 	position: relative;
@@ -14,7 +14,8 @@ input{
 	border-radius: 10px;
 	outline: none;
 	border: none;
-	border: 1px solid #BFC0C0;
+  width: 70vw;
+	border: 1px solid #3F403F;
 	transition: box-shadow 0.5s ease-in;
 } 
 input:focus{
@@ -22,7 +23,7 @@ input:focus{
 }
 
 input[type='text']::placeholder{
-	color: #BFC0C0;
+	color: #CED0CE;
 }
 
 .search{
@@ -31,6 +32,6 @@ input[type='text']::placeholder{
 	top: 6px;
 	padding-left: 8px;
 	width: 30px;
-	color: #2D3142;
+	color: #3F403F;
 	transition: width 0.5s ease-in;
 }

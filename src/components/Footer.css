@@ -7,11 +7,15 @@
 	margin: 0 auto;
 	width: 100vw;
   padding: 10px 0;
-	border-top: 1px solid #e7e7e7;
+	border-top: 1px solid #e5e7e5;
 }
 .footer a{
-  color: red;
+  color: #3F403F;
 }
 .active svg{
-  color: black;
+  color: #475841;
+  border: 2px solid #3F403F;
+  border-radius: 4px;
+  padding: 3px;
+  box-shadow: 1px 1px 1px 1px #e5e7e5;
 }

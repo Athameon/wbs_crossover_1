@@ -72,19 +72,19 @@ const Main = (props) => {
 		<>
       <Feed data={searchResult} />
       <div className='modal-pop'>
-        <button onClick={showModal}>ADD</button>
-      </div>
+        <button className='open-modal-btn' onClick={showModal}>+</button>
       <Modal 
       isOpen={openModal}
       onRequestClose={closeModal}
       ariaHideApp={false}
       className='Modal'
       >
-        <button onClick={closeModal}>x</button>
-        <form>
-          <textarea cols="20" rows="5"></textarea>
+        <form className='modal-form'>
+          <textarea cols="20" rows="3"></textarea>
+          <button className='close-modal-btn' onClick={closeModal}>x</button>
         </form>
       </Modal>
+      </div>
 	  </>
     )
   }

@@ -27,7 +27,7 @@
 }
 .message-content{
   font-size: 14px;
-  color: #4F5D75;
+  color: #3F403F;
 }
 .hash{
   display: flex;
@@ -38,11 +38,11 @@
 }
 .date{
   font-size: 12px;
-  color: #BFC0C0;
+  color: #CED0CE;
   padding-bottom: 10px;
 }
 .message-hashtags{
 font-weight: 700;
 font-size: 14px;
-color: #EF8354;
+color: #475841;
 }
