@@ -13,11 +13,17 @@ const Message = (item) => {
 
 	return (
 		<div className='message'>
-			<img src={item.author.img} alt="User" />
-			<p>{item.author.user_name}</p>
-			<p>{item.date}</p>
-			<p>{item.content}</p>
-			<p className="message-hashtags">{getHashtags(item)}</p>
+		{/* {item.author.img} */}
+			<img className='user-img' src='https://randomuser.me/api/portraits/women/48.jpg' alt="User" />
+			<div className='users'>
+				<span className='user-name'>{item.author.user_name}</span>
+				<span className='message-content'>{item.content}</span>
+			</div>
+			<div className='hash'>
+				<span className='date'>{item.date}</span>
+				<span className="message-hashtags">{getHashtags(item)}</span>
+			</div>
+		
 		</div>
 	)
 }
