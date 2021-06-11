@@ -23,7 +23,6 @@ const Message = (item) => {
 				<Link className='user-link' to={'user/' + item.author.id} >
 					<span className='user-name'>{item.author.user_name}</span>
 				</Link>
-				{/* <span className='user-name'>{item.author.user_name}</span> */}
 				<span className='message-content'>{item.content}</span>
 			</div>
 			<div className='hash'>
