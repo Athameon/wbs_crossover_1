@@ -9,7 +9,7 @@
         "first_name": "Mia",
         "last_name": "Doa",
         "user_name": "@Mia18",
-        "img": null,
+        "img": "https://randomuser.me/api/portraits/women/48.jpg",
         "password": "passwort",
         "email": "Mia18@gmail.com"
       },
@@ -26,7 +26,7 @@
         "first_name": "Paul",
         "last_name": "Fritze",
         "user_name": "@ItsPaul",
-        "img": null,
+        "img": "https://randomuser.me/api/portraits/women/50.jpg",
         "password": "passwort54",
         "email": "ItsPaul@gmail.com"
       },
